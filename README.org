@@ -1,0 +1,11 @@
+# Gonero
+
+A simple python program to create a list of bruteforceable seedphrases for a (partially) lost seedphrase to a Monero wallet.
+
+# Scenario
+
+It's 2015. You decide to get yourself some Monero and (like the good lad you are) you don't want to store your seedphrase anywhere obvious. You therefore decide to write it on a piece of paper and stick it into the Illustrated edition of Yuval Noah Harari's book 'Sapiens' you haven't opened once after buying it. But then: disaster strikes. After putting the book into a box in your basement and forgetting about it, a storm hits your area and the basement gets flooded! Remembering the very important piece of paper stuck between two illustrations of handsome cavemen, you run down to recover it only to find out that some of the words have already been smudged.
+
+# How Gonero can help
+
+A Monero address exists of 25 words that are specified inside of a wordlist (most commonly: english.h) The first 24 words are random and the 25th word works as a checksum and is always one of the words that has already been featured inside the passphrase. In reality, the words don't even matter all too much. It only takes the first three letters into account. That means as long as the first three letters of a word are also present in a word inside of the wordlist it's a legal word. By filling up the possibilities of specific word positions with possible words, the program can check which ones are legal and then proceed to create all possible combinations and write them into an org-file. This way you can easily open your favorite emacs flavour and start trying each phrase until you retrieve your beautiful coins.
